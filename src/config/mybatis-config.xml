@@ -15,4 +15,4 @@
         <mapper resource="com/cyh/demos/mybatis/mapper/userMapper.xml" />  
     </mappers>  
   
-</configuration>    
+</configuration>

@@ -7,7 +7,7 @@ public class SpringTest {
 
 	public static void main(String[] args) {
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("config/spring-common.xml");
-		Object userMapper = ctx.getBean("userMapper");
+		Object userMapper = ctx.getBean("dataSource");
 		System.out.println(userMapper);
 	}
 

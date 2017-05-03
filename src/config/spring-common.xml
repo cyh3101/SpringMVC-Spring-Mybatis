@@ -9,8 +9,9 @@
 		http://www.springframework.org/schema/context/spring-context-4.0.xsd
 		http://www.springframework.org/schema/tx
 		http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+		<bean id="userMapper" class="com.cyh.demos.mybatis.mapper."></bean>
 		<!-- 1. 数据源 : DriverManagerDataSource -->  
-		<bean id="dataSource" class="org.springframework.jdbc.dataSource.DriverManagerDataSource">
+		<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 			<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
 			<property name="url" value="jdbc:mysql://localhost:3306/mybatis"></property>
 			<property name="username" value="root"></property>
@@ -22,7 +23,7 @@
         -->  
 		<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 			<property name="dataSource" ref="dataSource"></property>
-			<property name="configLoaction" value="classpath:config/mybatis-config.xml"></property>
+			<property name="configLocation" value="classpath:config/mybatis-config.xml"></property>
 		</bean>
 		<!-- mybatis自动扫描加载sql映射文件 -->
 		<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
